@@ -1,0 +1,6 @@
+package entities;
+
+public class Medico {
+	private String nome;
+	private Especialidade especialidade;
+}

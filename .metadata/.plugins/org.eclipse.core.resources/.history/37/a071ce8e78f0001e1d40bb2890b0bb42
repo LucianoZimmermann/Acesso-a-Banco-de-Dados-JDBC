@@ -1,0 +1,18 @@
+package entities;
+
+public class Especialidade {
+	private String nome_especialidade;
+
+	public Especialidade(String nome_especialidade) {
+		super();
+		this.nome_especialidade = nome_especialidade;
+	}
+
+	public String getNome_especialidade() {
+		return nome_especialidade;
+	}
+
+	public void setNome_especialidade(String nome_especialidade) {
+		this.nome_especialidade = nome_especialidade;
+	}
+}

@@ -1,0 +1,33 @@
+package entities;
+
+public class Paciente {
+	private String nome_paciente;
+	private Enfermidade enfermidade;
+	
+	public Paciente(String nome_paciente, Enfermidade enfermidade) {
+		super();
+		this.nome_paciente = nome_paciente;
+		this.enfermidade = enfermidade;
+	}
+	
+	public String getNome_paciente() {
+		return nome_paciente;
+	}
+	
+	public void setNome_paciente(String nome_paciente) {
+		this.nome_paciente = nome_paciente;
+	}
+	
+	public Enfermidade getEnfermidade() {
+		return enfermidade;
+	}
+	
+	public void setEnfermidade(Enfermidade enfermidade) {
+		this.enfermidade = enfermidade;
+	}
+
+	@Override
+	public String toString() {
+		return "Paciente: " + nome_paciente + "/nEnfermidade: " + enfermidade;
+	}
+}

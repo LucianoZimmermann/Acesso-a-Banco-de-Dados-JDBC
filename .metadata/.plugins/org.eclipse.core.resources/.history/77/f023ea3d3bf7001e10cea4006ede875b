@@ -1,0 +1,56 @@
+package application;
+
+import java.util.List;
+import java.util.Scanner;
+
+import model.dao.DaoFactory;
+import model.dao.DepartmentDao;
+import model.entites.Department;
+
+public class Program2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("TEST 1 - Department - findById");
+		
+		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
+		Department department = departmentDao.findById(2);
+		System.out.println(department);
+		
+		/*
+		System.out.println("\nTEST 2 - Department - insert");
+		Department newDepartment = new Department(null, "Financial");
+		departmentDao.insert(newDepartment);
+		System.out.println("Inserted! New Id = " + newDepartment.getId());
+		
+		System.out.println("\nTEST 3 - Department - update");
+		System.out.println("Digite um departemento para atualizar: " );
+		System.out.print("Id to Update: ");
+		int newid = sc.nextInt();
+		System.out.println("New name: ");
+		String newname = sc.next();
+		Department updateDepartment = new Department(newid, newname);
+		departmentDao.update(updateDepartment);
+		*/
+		System.out.println("\nTEST 4 - Department - deleteById");
+		
+		System.out.println("Delete by ID: ");
+		int idToDelete = sc.nextInt();
+		departmentDao.deleteById(idToDelete);
+		
+		System.out.println("Deleted!");
+		
+		System.out.println("\nTEST 4 - Department - findAll");
+		
+		List<Department> list = departmentDao.findAll();
+		
+		for(Department dep : list) {
+			System.out.println(dep);
+		}
+		
+		sc.close();
+		
+	}
+
+}

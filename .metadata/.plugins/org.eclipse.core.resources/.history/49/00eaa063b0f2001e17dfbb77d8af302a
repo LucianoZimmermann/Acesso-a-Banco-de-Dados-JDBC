@@ -1,0 +1,29 @@
+package application;
+
+import java.util.List;
+
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
+import model.entites.Seller;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		System.out.println("Test Seller findbyId");
+		
+		Seller seller = sellerDao.findById(3);
+		
+		System.out.println(seller);
+		
+		System.out.println("Test Seller findByDepartment");
+		
+		List<Seller> list = sellerDao.findByDepartment();
+
+	}
+
+}

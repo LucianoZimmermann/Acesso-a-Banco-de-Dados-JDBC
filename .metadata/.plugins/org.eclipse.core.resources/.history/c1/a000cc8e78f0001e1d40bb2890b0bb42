@@ -1,0 +1,18 @@
+package entities;
+
+public class Enfermidade {
+	private String nome_enfermidade;
+
+	public Enfermidade(String nome_enfermidade) {
+		super();
+		this.nome_enfermidade = nome_enfermidade;
+	}
+
+	public String getNome_enfermidade() {
+		return nome_enfermidade;
+	}
+
+	public void setNome_enfermidade(String nome_enfermidade) {
+		this.nome_enfermidade = nome_enfermidade;
+	}
+}

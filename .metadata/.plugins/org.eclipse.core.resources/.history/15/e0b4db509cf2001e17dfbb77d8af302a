@@ -1,0 +1,36 @@
+package model.dao.impl;
+
+import java.util.List;
+
+import model.dao.SellerDao;
+import model.entities.Seller;
+
+public class SellerDaoJDBC implements SellerDao{
+	
+	Connection conn = null;
+
+	@Override
+	public void insert(Seller obj) {	
+	}
+
+	@Override
+	public void update(Seller obj) {	
+	}
+
+	@Override
+	public void deleteById(Seller obj) {
+	}
+
+	@Override
+	public void findById(Seller obj) {
+		
+		
+		
+	}
+
+	@Override
+	public List<Seller> findAll() {
+		return null;
+	}
+
+}
